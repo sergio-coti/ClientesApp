@@ -1,0 +1,76 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code
+.vscode/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Rider
+.idea/
+
+# ASP.NET
+## Ignore .NET Core build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio 2019
+.vs/ 
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# NPM
+node_modules/
+
+# Microsoft Azure
+.svclog
+
+# IIS
+_IISExpress/
+IISExpress/
+
+# Visual Studio
+.vscode/
+.vscode/*
+.vscode/test.*
+.vscode-test/
+
+# ASP.NET Runtime config
+*.runtimeconfig.json
