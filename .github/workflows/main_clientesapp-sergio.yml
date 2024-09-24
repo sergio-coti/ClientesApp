@@ -21,17 +21,38 @@ jobs:
         with:
           dotnet-version: '8.x'
 
-      - name: Build with dotnet
+      - name: Build solution
         run: dotnet build --configuration Release
 
+      - name: Build test project
+        run: dotnet build ClientesApp.Infra.Data.SqlServer.Tests/ClientesApp.Infra.Data.SqlServer.Tests.csproj --configuration Release
+
       - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        run: dotnet publish -c Release -o ./myapp  # Publicar a aplicação no diretório 'myapp'
+
+      - name: Compress published app into a ZIP
+        run: Compress-Archive -Path ./myapp/* -DestinationPath ./myapp.zip  # Compactar a aplicação em um arquivo ZIP
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: .net-app
-          path: ${{env.DOTNET_ROOT}}/myapp
+          path: ./myapp.zip  # Fazer upload do arquivo ZIP
+
+  test:
+    runs-on: windows-latest
+    needs: build
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up .NET Core
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.x'
+
+      - name: Run tests with dotnet
+        run: dotnet test ClientesApp.Infra.Data.SqlServer.Tests/ClientesApp.Infra.Data.SqlServer.Tests.csproj --configuration Release
 
   deploy:
     runs-on: windows-latest
@@ -61,5 +82,5 @@ jobs:
         with:
           app-name: 'clientesapp-sergio'
           slot-name: 'Production'
-          package: .
+          package: './myapp.zip'  # Usar o arquivo ZIP gerado
           
