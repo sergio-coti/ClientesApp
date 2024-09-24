@@ -16,6 +16,7 @@ namespace ClientesApp.Infra.Data.SqlServer.Tests
 {
     public class ClienteRepositoryTest
     {
+        //atributos
         private readonly Faker<Cliente> _fakerCliente;
         private readonly DataContext _dataContext;
         private readonly ClienteRepository _clienteRepository;
