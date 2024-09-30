@@ -26,7 +26,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientesApp.Infra.Data.SqlServer.Tests", "ClientesApp.Infra.Data.SqlServer.Tests\ClientesApp.Infra.Data.SqlServer.Tests.csproj", "{B08CAC8F-479F-4972-899E-CF056BC1BCC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientesApp.Infra.Data.SqlServer.Tests", "ClientesApp.Infra.Data.SqlServer.Tests\ClientesApp.Infra.Data.SqlServer.Tests.csproj", "{B08CAC8F-479F-4972-899E-CF056BC1BCC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientesApp.Domain.Tests", "ClientesApp.Domain.Tests\ClientesApp.Domain.Tests.csproj", "{C0EF9ABD-5C7F-44AB-A9D7-5C213550CC6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,6 +60,10 @@ Global
 		{B08CAC8F-479F-4972-899E-CF056BC1BCC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B08CAC8F-479F-4972-899E-CF056BC1BCC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B08CAC8F-479F-4972-899E-CF056BC1BCC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0EF9ABD-5C7F-44AB-A9D7-5C213550CC6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0EF9ABD-5C7F-44AB-A9D7-5C213550CC6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0EF9ABD-5C7F-44AB-A9D7-5C213550CC6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0EF9ABD-5C7F-44AB-A9D7-5C213550CC6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +75,7 @@ Global
 		{31D075EE-B781-41EA-8FC5-3C2F804C9753} = {D4752AC1-1AA8-4504-ADC5-233A86518CD5}
 		{D3ADD8BF-8A72-4227-9B4C-648024B57EC6} = {D4752AC1-1AA8-4504-ADC5-233A86518CD5}
 		{B08CAC8F-479F-4972-899E-CF056BC1BCC9} = {D4752AC1-1AA8-4504-ADC5-233A86518CD5}
+		{C0EF9ABD-5C7F-44AB-A9D7-5C213550CC6C} = {1161FDE4-F649-4C5D-8EDE-2B9D267EE1BB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {864CF089-4564-4D70-8118-DA1DB3A5CEE6}
