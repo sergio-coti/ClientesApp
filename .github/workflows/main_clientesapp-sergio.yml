@@ -24,8 +24,11 @@ jobs:
       - name: Build solution
         run: dotnet build --configuration Release
 
-      - name: Build test project
+      - name: Build test project (SQL Server Tests)
         run: dotnet build ClientesApp.Infra.Data.SqlServer.Tests/ClientesApp.Infra.Data.SqlServer.Tests.csproj --configuration Release
+
+      - name: Build test project (Domain Tests)
+        run: dotnet build ClientesApp.Domain.Tests/ClientesApp.Domain.Tests.csproj --configuration Release
 
       - name: dotnet publish
         run: dotnet publish -c Release -o ./myapp  # Publicar a aplicação no diretório 'myapp'
@@ -51,8 +54,11 @@ jobs:
         with:
           dotnet-version: '8.x'
 
-      - name: Run tests with dotnet
+      - name: Run SQL Server Tests
         run: dotnet test ClientesApp.Infra.Data.SqlServer.Tests/ClientesApp.Infra.Data.SqlServer.Tests.csproj --configuration Release
+
+      - name: Run Domain Tests
+        run: dotnet test ClientesApp.Domain.Tests/ClientesApp.Domain.Tests.csproj --configuration Release
 
   deploy:
     runs-on: windows-latest
@@ -83,4 +89,3 @@ jobs:
           app-name: 'clientesapp-sergio'
           slot-name: 'Production'
           package: './myapp.zip'  # Usar o arquivo ZIP gerado
-          
