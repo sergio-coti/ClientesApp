@@ -16,7 +16,7 @@ namespace ClientesApp.Domain.Interfaces.Repositories
         void Update(Cliente cliente);
         List<Cliente> GetAll();
         Cliente GetById(Guid id);
-        bool VerifyEmail(string email);
-        bool VerifyCpf(string cpf);
+        bool VerifyEmail(string email, Guid clienteId);
+        bool VerifyCpf(string cpf, Guid clienteId);
     }
 }
