@@ -26,6 +26,8 @@ namespace ClientesApp.API.Controllers
         [ProducesResponseType(typeof(ClienteResponseDto), 201)]
         public IActionResult Post([FromBody] ClienteRequestDto dto)
         {
+            Thread.Sleep(2000);
+
             try
             {
                 var response = _clienteService.Incluir(dto);
@@ -58,6 +60,8 @@ namespace ClientesApp.API.Controllers
         [ProducesResponseType(typeof(ClienteResponseDto), 200)]
         public IActionResult Put(Guid id, [FromBody] ClienteRequestDto dto)
         {
+            Thread.Sleep(2000);
+
             try
             {
                 var response = _clienteService.Alterar(id, dto);
@@ -90,6 +94,8 @@ namespace ClientesApp.API.Controllers
         [ProducesResponseType(typeof(ClienteResponseDto), 200)]
         public IActionResult Delete(Guid id)
         {
+            Thread.Sleep(2000);
+
             try
             {
                 var response = _clienteService.Excluir(id);
@@ -112,9 +118,11 @@ namespace ClientesApp.API.Controllers
         [ProducesResponseType(typeof(List<ClienteResponseDto>), 200)]
         public IActionResult GetAll()
         {
+            Thread.Sleep(2000);
+
             try
             {
-                var response = _clienteService.Consultar();
+                var response = _clienteService.Consultar();                
                 
                 if(response.Any())
                     return StatusCode(200, response);
@@ -134,6 +142,8 @@ namespace ClientesApp.API.Controllers
         [ProducesResponseType(typeof(ClienteResponseDto), 200)]
         public IActionResult GetById(Guid id)
         {
+            Thread.Sleep(2000);
+
             try
             {
                 var response = _clienteService.ObterPorId(id);
