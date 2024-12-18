@@ -1,0 +1,40 @@
+# Logs
+*.log
+logs/
+LogFiles/
+
+# Visual Studio
+.vs/
+.vscode/
+
+# Build results
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.userosscache
+*.sln.docstates
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Rider
+.idea/
+*.suo
+*.opt
+*.sln.iml
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Configs
+appsettings.*.json
+secrets.json
